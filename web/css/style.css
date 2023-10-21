@@ -1,0 +1,9 @@
+:root {
+    --greenPrimary: #00732E;
+    --white: #FFFFFF;
+}
+
+.bg-green {
+    background: var(--greenPrimary) !important;
+}
+
