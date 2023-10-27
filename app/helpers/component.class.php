@@ -60,7 +60,7 @@
         public static function dataTable($headers, $data)
         {
             print("
-            <div class='table-responsive'>
+            <div class=''>
                 <table id='dataTable' class='table table-hover' style='width:100%'>
                 <thead>
                     <tr>

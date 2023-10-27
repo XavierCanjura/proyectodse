@@ -1,6 +1,10 @@
-
-<nav class='navbar bg-green'>
-    <div class="container-fluid d-flex justify-content-center">
-        <p class="text-white fs-2 m-0">Comandos de Salvamento</p>
+<nav class='navbar-sav bg-green'> 
+    <div class="navbar-menu-sav" id="iconMenu">
+        <a class="navbar-item-sav " id='btnMenu' data-bs-toggle="offcanvas" href="#offcanvasScrolling" role="button" aria-controls="offcanvasExample">
+            <i class="bi bi-list"></i>
+        </a>
+    </div>
+    <div class='navbar-content-sav'>
+        <a class='navbar-title-sav' href="../home">Comandos de Salvamento</a>
     </div>
 </nav>
