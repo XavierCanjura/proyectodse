@@ -29,7 +29,7 @@ header {
 .navbar-contain-title {
   position: relative;
   width: 300px;
-  background: var(--blue-dark);
+  background: var(--greenPrimary);
   display: flex;
   align-items: center;
   padding-left: 2.5rem;
@@ -132,6 +132,7 @@ header {
   bottom: calc(100vh - 93%);
   width: 50px;
   height: 50px;
+  
 }
 
 .container-btn-round-sav a {
@@ -142,7 +143,7 @@ header {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: var(--blue-dark);
+  background: var(--greenPrimary);
 }
 
 .btn-round-sav i {
@@ -176,7 +177,7 @@ a.watch {
 }
 
 .btn.btn-agregar {
-  background: var(--blue-dark);
+  background: var(--greenPrimary);
   color: #ffffff;
 }
 
@@ -199,7 +200,7 @@ a.watch {
 }
 
 .card-sav {
-  background: var(--blue-dark);
+  background: var(--greenPrimary);
   color: var(--white);
 }
 

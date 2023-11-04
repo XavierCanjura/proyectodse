@@ -9,9 +9,9 @@
     class Page extends Component{
 
         public static function templateHeader($title){
-            // if(!isset($_SESSION['auth'])){
-            //     header('Location: ../../index.php');
-            // }
+            if(!isset($_SESSION['token'])){
+                header('Location: ../../index.php');
+            }
 
             print("
             <!DOCTYPE html>
@@ -77,9 +77,33 @@
             ");
         }
 
-        public static function templateLoginHeader(){}
+        public static function templateLoginHeader()
+        {
+            print("
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta charset='UTF-8'>
+                <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+                <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                <link rel='icon' type='image/x-icon' href='../../web/images/favicon.ico'>
+                <title>Login</title>
+                <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+                <link rel='stylesheet' href='../../web/css/login.css'>
+                <link rel='stylesheet' href='../../web/css/bootstrap.min.css'>
+                <script src='../../web/js/sweetalert.min.js'></script>
+            </head>
+            <body>
+            ");
+        }
 
-        public static function templateLoginFooter(){}
+        public static function templateLoginFooter()
+        {
+            print("                
+            </body>
+            </html>
+            ");
+        }
 
         public static function navbar()
         {

@@ -14,5 +14,17 @@
         public function urlCategoryEmergencias(){
             return "".$this->baseUrl."".$this->version."/catEmergencias";
         }
+
+        public function urlUsuarios(){
+            return "".$this->baseUrl."".$this->version."/users";
+        }
+
+        public function urlSocorristas(){
+            return "".$this->baseUrl."".$this->version."/users/2";
+        }
+
+        public function urlTipoIncidente(){
+            return "".$this->baseUrl."".$this->version."/tipoIncidente";
+        }
     }
 ?>
