@@ -1,4 +1,5 @@
 <?php
-    Component::dataTable(["Id", "Nombre", "Estado", "Acciones"], $dataMapper);
-    
+    echo $_SESSION['token'];
+    echo '</br>';
+    print_r($_SESSION['user'])
 ?>
