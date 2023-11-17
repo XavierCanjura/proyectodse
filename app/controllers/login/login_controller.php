@@ -24,7 +24,7 @@
             ];
 
             $data = $api->post($urls->urlLogin(), '', $form);
-
+            
             if(!isset($data->token)){
                 throw new Exception('Credenciales incorrectas');
             }

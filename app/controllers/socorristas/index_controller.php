@@ -5,7 +5,8 @@
         $api = new API();
         $urls = new URLs();
 
-        $data = $api->get($urls->urlSocorristas(), "44|laravel_sanctum_2EoSahK6WQ7AHMciBgHu6LjndNLH8GJnkGnyJLI9b2285496");
+        $response = $api->get($urls->urlSocorristas(), $_SESSION['token']);
+        $data = $response->data;
         $dataMapper = array();
 
 
