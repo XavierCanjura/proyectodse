@@ -23,9 +23,9 @@
             <li class='sidenav-item-sav <?=$urlArr[3] === 'tipos_incidente'? 'active' : ''?>'>
                 <a href="../tipos_incidente"><i class="bi bi-heart-pulse"></i>Tipos de incidentes</a>
             </li>
-            <!-- <li class='sidenav-item-sav <?=$urlArr[3] === 'tipos_usuario'? 'active' : ''?>'>
+            <li class='sidenav-item-sav <?=$urlArr[3] === 'tipos_usuario'? 'active' : ''?>'>
                 <a href="../tipos_usuario"><i class="bi bi-person-badge"></i>Tipos de usuario</a>
-            </li> -->
+            </li>
             <li class='sidenav-item-sav <?=$urlArr[3] === 'categorias'? 'active' : ''?>'>
                 <a href="../categorias"><i class="bi bi-life-preserver"></i>Categorias de em</a>
             </li>

@@ -1,27 +1,34 @@
 <?php
-    // require_once('../../app/models/api.class.php');
 
-    // try {
-    //     $api = new API();
-    //     $url = new URLs();
+    try {
+        $api = new API();
+        $url = new URLs();
         
-    //     $data = $api->get($url->urlHospitales(), "44|laravel_sanctum_2EoSahK6WQ7AHMciBgHu6LjndNLH8GJnkGnyJLI9b2285496");
-    //     $dataMapper = array();
+        $responseUser = $api->get($url->urlUsuarios(), $_SESSION['token']);
+        $dataUser = $responseUser->data;
 
-    //     for($i = 0; $i < sizeof($data); $i++){
-    //         $hospital = array();
+        $responserTipoUser = $api->get($url->urlTipoUsuario(), $_SESSION['token']);
+        $dataTipoUser = $responserTipoUser->data;
 
-    //         $hospital[0] = $data[$i]->id;
-    //         $hospital[1] = $data[$i]->nombre;
-    //         $hospital[2] = $data[$i]->activo;
+        $countUsersByTipoUsuario = array();
+        $tipoUsuarioList = array();
 
-    //         $dataMapper[$i] = $hospital;
-    //     }
+        for($i = 0; $i < sizeof($dataTipoUser); $i++){
+            $counter = 0;
+            for($j = 0; $j < sizeof($dataUser); $j++){
+                if($dataTipoUser[$i]->id_tipo_usuario == $dataUser[$j]->id_tipo_usuario){
+                    $counter++;
+                }
+            }
+            $countUsersByTipoUsuario[$i] = $counter;
+            $tipoUsuarioList[$i] = $dataTipoUser[$i]->nombre;
+        }       
+
 
         require_once("../../app/views/home/index.php");
 
-    // } catch (Exception $error) {
-    //     Page::showMessage(2, $error->getMessage(), "");
-    // } 
+    } catch (Exception $error) {
+        Page::showMessage(2, $error->getMessage(), "");
+    } 
 
 ?>
