@@ -5,10 +5,11 @@
         $api = new API();
         $url = new URLs();
         
-        $data = $api->get($url->urlHospitales(), "44|laravel_sanctum_2EoSahK6WQ7AHMciBgHu6LjndNLH8GJnkGnyJLI9b2285496");
+        $response = $api->get($url->urlHospitales(), $_SESSION['token']);
+        $data = $response->data;
         $dataMapper = array();
 
-        for($i = 0; $i < sizeof($data); $i++){
+        for($i = 0; $i < sizeof($data); $i++) {
             $hospital = array();
 
             $hospital[0] = $data[$i]->id;

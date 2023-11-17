@@ -123,12 +123,16 @@
         }
 
         //FUNCION PARA CREAR INPUTS
-        public static function textInput($label, $name, $value, $placeholder, $type)
+        public static function textInput($label, $name, $value, $placeholder, $type, $disabled = false)
         {
             print("
                 <div class='col-6 mb-3'>
                     <label for='$name' class='form-label'>$label</label>
-                    <input type='$type' class='form-control' id='$name' name='$name' value='$value' placeholder='$placeholder'>
+                    <input type='$type' class='form-control' id='$name' name='$name' value='$value' placeholder='$placeholder'
+            ");
+            $disabled ?  print("disabled") : "";
+            print("
+                    >
                 </div>
             ");
         }

@@ -27,11 +27,11 @@
                 <a href="../tipos_usuario"><i class="bi bi-person-badge"></i>Tipos de usuario</a>
             </li>
             <li class='sidenav-item-sav <?=$urlArr[3] === 'categorias'? 'active' : ''?>'>
-                <a href="../categorias"><i class="bi bi-life-preserver"></i>Categorias de em.</a>
+                <a href="../categorias"><i class="bi bi-life-preserver"></i>Categorias de em</a>
             </li>
-            <!-- <li class='sidenav-item-sav <?=$urlArr[3] === 'facturas'? 'active' : ''?>'>
-                <a href="../facturas"><i class="bi bi-receipt"></i>Facturas</a>
-            </li> -->
+            <li class='sidenav-item-sav <?=$urlArr[3] === 'subcategorias'? 'active' : ''?>'>
+                <a href="../subcategorias"><i class="bi bi-receipt"></i>Subcategorias de em</a>
+            </li>
         </ul>
         <h3 class='text-center text-white mt-3'>Perfil</h3>
         <ul class='sidenav-list-sav'>
